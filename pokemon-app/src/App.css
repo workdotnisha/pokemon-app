@@ -1,4 +1,8 @@
-/* App.css */
+body{
+  /* background-color: #edc4b3; */
+  background-color: #F5F5F5;
+  color: #10BDC0;
+}
 .app {
   text-align: center;
   padding: 20px;
@@ -19,16 +23,39 @@
 }
 
 .pokemon-card {
+  background-color: #C3ECE6;
+  /* background-color: #e6b8a2; */
   border: 1px solid #ddd;
+  /* border: 1px solid #774936; */
   border-radius: 10px;
   padding: 10px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px #10BDC0;
   transition: transform 0.2s;
+  
 }
 
 .pokemon-card:hover {
   transform: scale(1.05);
+  /* background-color: #ddd; */
+  /* transition: ; */
+}
+
+.pokemon-card::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  border-radius: 10px;
+  height: 100%;
+  z-index:-1 ;
+  transition: .3s;
+  background: #d7f4f0d8;
+  ;
+}
+.pokemon-card:hover::before{
+  width: 100%;
 }
 
 .pokemon-card img {
